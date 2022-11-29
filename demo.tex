@@ -1,0 +1,72 @@
+\documentclass[]{zjureport}
+\title{Report Title}
+\author{M. Y. Name}
+\subtitle{Lab Report 01}
+\course{Course Name}
+\instructor{M. Y. Instructor}
+\department{College of M. Y.}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \tocpage
+
+\section{Introduction}
+    \blindtext[1]
+    \subsection{Background}
+    \blindtext[2]
+    \subsection{Literature Review}
+    \blindtext[2]
+
+\section{Usage}
+\blindtext[1]
+\subsection{Mathematical expressions}
+The Fourier transform of the signal $x(t)$ is defined as 
+\begin{equation}
+    X(f)=\int_{-\infty}^{\infty} x(t) e^{-j2\pi ft} \, \tu{d}t
+    \label{eq: F trans}
+\end{equation}
+where $X(f)$ is the spectrum of the signal at frequency $f$. The time domain expression can then be reproduced by synthesizing all frequency content through inverse Fourier transform as follows.
+\begin{equation}
+    x(t)=\int_{-\infty}^{\infty} X(f) e^{j2\pi ft} \, \tu{d}f
+    \label{eq: inv F trans}
+\end{equation}
+
+By taking the derivative of the equation (\ref{eq: inv F trans}) with respect to the time $t$, one can prove the derivative property of the Fourier transform as
+\begin{equation}
+    \frac{\tu{d}x}{\tu{d}t} \qquad \to \qquad (j2\pi f) X(f)
+    \label{eq: deriv.}
+\end{equation}
+
+\subsection{Include table}
+\blindtext[1]
+\begin{table}[H]
+    \caption{Characteristics of the buck converter}
+    \label{tab: Data}
+    \centering
+    \begin{tabular}{c|c|c}
+    \toprule
+     \bf{Input Voltage (V)}& \bf{Output Voltage (V)} & \textbf{Calculated Duty Cycle} \\
+     \midrule
+     40 & 20 & 0.5\\
+     50 & 20 & 0.5 \\
+     80 & 20 & 0.25 \\
+     \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Include figure}
+\blindtext[1]
+
+%%%%%%%%%%%%%%% NEW SECTION %%%%%%%%%%%%%%% 
+\subsection{Citation}
+Paper \cite{Gole97} provides guidelines for modeling power electronics in electric power engineering application. If you do not include any reference please delete the reference section at the end of the document (see three lines of code before \texttt{\textbackslash end\{document\}})
+
+
+\section{Conclusion}
+\blindtext{3}
+
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{References}
+\end{document}
